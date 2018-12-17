@@ -80,19 +80,17 @@ def divide(a,b,m,n,list0,method = []):
     else:
         return(False)
 
-result = []
-a = int(turtle.numinput("分割","请输入砖的长"))
-b = int(turtle.numinput("分割","请输入砖的宽"))
-m = int(turtle.numinput("分割","请输入墙的长"))
-n = int(turtle.numinput("分割","请输入墙的宽"))
-list0 = [(x,y) for x in range(m) for y in range(n)]
-divide(a,b,m,n,list0,method = [])
-x = len(result)
-y = int(turtle.numinput("Select Plan","Input number of 0-"+str(x-1)))
-Plan = result[y]
-drawlist(list0)
-for brick in Plan:
-    drawbrick(brick)
-
 if __name__ == '__main__':
-    main()
+    result = []
+    a = int(turtle.numinput("分割","请输入砖的长"))
+    b = int(turtle.numinput("分割","请输入砖的宽"))
+    m = int(turtle.numinput("分割","请输入墙的长"))
+    n = int(turtle.numinput("分割","请输入墙的宽"))
+    list0 = [(x,y) for x in range(m) for y in range(n)]
+    divide(a,b,m,n,list0,method = [])
+    x = len(result)
+    y = int(turtle.numinput("Select Plan","Input number of 0-"+str(x-1)))
+    Plan = result[y]
+    drawlist(list0)
+    for brick in Plan:
+        drawbrick(brick)
